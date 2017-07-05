@@ -1,3 +1,25 @@
+##############################################################################################################
+
+
+# Dependencies
+
+This project uses Python 2.7. All modules used are part of the Python standard library: argparse, collections.Counter, csv, and datetime.
+
+### Additional Features
+
+I implemented an additional feature, Feature 5. In order to run it, run ./run_extra.sh.
+
+Feature 5 scans the input for a single host, specified as a command line argument. Feature 5 outputs bins.txt, which lists the host's activity over a series of bins (default 5 minutes). If there is no activity within a given bin, 0 will be listed. This could allow a client to generate plots over time for a given host, e.g. to understand usage patterns for a given customer.
+
+All parameters presented in the problem statement, including lengths of time for the activity windows in Features 3 and 4, are tuneable parameters. 
+
+## Testing
+
+The module src/profiler.py runs cProfiler on all four features using the test dataset.
+
+I use py.test for my unit tests. Run py.test from the root directory.
+
+##############################################################################################################
 # Table of Contents
 1. [Challenge Summary](README.md#challenge-summary)
 2. [Details of Implementation](README.md#details-of-implementation)
@@ -138,7 +160,7 @@ The directory structure for your repo should look like this:
     ├── README.md 
     ├── run.sh
     ├── src
-    │   └── process_log.py
+    │   └── log_save.py
     ├── log_input
     │   └── batch_log.json
     │   └── stream_log.json
@@ -159,7 +181,7 @@ The directory structure for your repo should look like this:
                 |__ log_output
                     └── flagged_purchases.json
 
-**Don't fork this repo*, and don't use this `README` instead of your own. The contents of `src` should not contain a single file called `process_log.py`, which is only an example. Instead, you should include your own source files and give them expressive names.
+**Don't fork this repo*, and don't use this `README` instead of your own. The contents of `src` should not contain a single file called `log_save.py`, which is only an example. Instead, you should include your own source files and give them expressive names.
 
 ## Testing your Directory Structure and Output Format
 

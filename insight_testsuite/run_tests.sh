@@ -69,7 +69,6 @@ function compare_outputs {
     diff ${PROJECT_ANSWER_PATH1} ${TEST_ANSWER_PATH1}
   fi
 
- 
 }
 
 function run_all_tests {
